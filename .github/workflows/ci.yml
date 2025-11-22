@@ -1,7 +1,7 @@
 name: Demo Workflow
 on: push
 jobs:
-  build-the-car:
+  build-and-test-car:
     runs-on: ubuntu-latest
     steps:
       - name: Build the car
@@ -12,9 +12,7 @@ jobs:
           echo "chassis" >> car.txt
           echo "engine" >> car.txt
           echo "wheels" >> car.txt
-  test-the-car:
-    runs-on: ubuntu-latest
-    steps:
+      
       - name: Test the car
         run: |
           test -f build/car.txt
